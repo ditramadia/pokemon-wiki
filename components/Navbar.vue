@@ -31,7 +31,7 @@
       </NuxtLink>
 
       <div class="max-w-[500px] w-full">
-        <input type="text" class="text-input w-full bg-neutral-900" placeholder="Search">
+        <input type="text" class="text-input w-full bg-neutral-900" placeholder="Search pokemon">
       </div>
 
       <div class="flex gap-4 items-center">

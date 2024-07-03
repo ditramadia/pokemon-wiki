@@ -12,6 +12,12 @@
   body {
     @apply bg-neutral-900;
   }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1000px] w-5/6 mx-auto;
+  }
 
   .text-input {
     @apply p-2 px-4 rounded bg-neutral-800 text-neutral-100 placeholder:text-neutral-500;
