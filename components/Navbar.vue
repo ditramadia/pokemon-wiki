@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 w-full py-4 bg-neutral-800">
+  <div class="fixed top-0 left-0 w-full py-4 bg-neutral-800 border-b-2 border-neutral-900">
     <div class="max-w-[1000px] w-5/6 mx-auto flex items-center justify-between">
       <NuxtLink to="/">
         <span class="text-yellow-400 text-xl font-[700]">Pokemon Store</span>
