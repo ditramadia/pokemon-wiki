@@ -31,12 +31,12 @@
 </script>
 
 <template>
-  <div class="container py-8 grid gap-8">
+  <div class="container py-16 grid gap-8">
     <Header title="Pokemons" subtitle="Find all your favourite pokemons!" />
   
     <main>
       <div class="grid grid-cols-4 gap-4">
-        <div v-for="(pokemon, index) in pokemons" :key="pokemon.id">
+        <div v-for="pokemon in pokemons" :key="pokemon.id">
           <Card :pokemon="pokemon" />
         </div>
       </div>

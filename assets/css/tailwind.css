@@ -26,4 +26,8 @@
   .button {
     @apply p-2 rounded cursor-pointer transition;
   }
+
+  .label {
+    @apply py-1 px-2 rounded;
+  }
 }

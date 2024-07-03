@@ -21,6 +21,7 @@ export default defineEventHandler(async (event) => {
       return {
         id: pokeData.id,
         name,
+        slug: name,
         price: pokeData.base_experience,
         image: pokeData.sprites.other["official-artwork"]["front_default"],
       };
