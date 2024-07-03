@@ -1,4 +1,7 @@
 <script setup>
+  import { useAuthStore } from '~/stores/authStore'
+  const store = useAuthStore()
+
   const menu = [
     {
       name: 'Cart',
@@ -13,6 +16,11 @@
       path: '/'
     },
   ]
+
+  const handleLogout = () => {
+    store.logout()
+    navigateTo('/login')
+  }
 </script>
 
 <template>
@@ -22,6 +30,10 @@
         <span class="text-yellow-400 text-xl font-[700]">Pokemon Store</span>
       </NuxtLink>
 
+      <div class="max-w-[500px] w-full">
+        <input type="text" class="text-input w-full bg-neutral-900" placeholder="Search">
+      </div>
+
       <div class="flex gap-4 items-center">
         <div v-for="item in menu" :key="item.name">
           <NuxtLink :to="item.path">
@@ -30,6 +42,7 @@
         </div>
         <div 
           class="text-red-500 cursor-pointer"
+          @click="handleLogout"
         >
           Logout
         </div>

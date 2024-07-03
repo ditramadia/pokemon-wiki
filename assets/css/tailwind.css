@@ -14,7 +14,7 @@
   }
 
   .text-input {
-    @apply p-2 rounded bg-neutral-800 text-neutral-100 placeholder:text-neutral-500;
+    @apply p-2 px-4 rounded bg-neutral-800 text-neutral-100 placeholder:text-neutral-500;
   }
 
   .button {
