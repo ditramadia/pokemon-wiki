@@ -18,6 +18,6 @@
   }
 
   .button {
-    @apply p-2 rounded;
+    @apply p-2 rounded cursor-pointer transition;
   }
 }
