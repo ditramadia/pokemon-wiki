@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
     })
   );
 
-  delay();
+  await delay();
 
   return {
     data: detailedPokemons,
