@@ -3,7 +3,7 @@
     layout: 'navbar'
   })
   
-  const { name } = useRoute().params;
+  const { name } = useRoute().params
   const pokemon = ref(null)
 
   const fetchData = async () => {
@@ -12,7 +12,19 @@
   }
   
   await fetchData()
-  console.log(pokemon.value.types[0].type.name)
+
+  const cart = useCart()
+
+  const handleAddToCart = () => {
+    let cartItem = {
+      id: pokemon.value.id,
+      name: pokemon.value.name,
+      slug: pokemon.value.name,
+      price: pokemon.value.base_experience,
+      image: pokemon.value.sprites.other['official-artwork']['front_default'],
+    }
+    cart.value.push(cartItem)
+  }
 </script>
 
 <template>
@@ -49,7 +61,7 @@
           <span class="text-neutral-400 font-[700] uppercase text-xs">Subtotal</span>
           <p class="text-4xl text-neutral-100 font-[700]">${{ pokemon.base_experience }}</p>
         </div>
-        <div class="button mt-4 bg-yellow-400 text-neutral-900 font-[700] flex items-center justify-center hover:bg-yellow-500">
+        <div @click="handleAddToCart" class="button mt-4 bg-yellow-400 text-neutral-900 font-[700] flex items-center justify-center hover:bg-yellow-500">
           Add to Cart
         </div>
         <div class="button mt-2 border-2 border-yellow-400 text-yellow-400 font-[700] flex items-center justify-center hover:bg-yellow-400 hover:text-neutral-900">
