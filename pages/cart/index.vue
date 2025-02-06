@@ -16,7 +16,7 @@
           <NuxtImg :src=item.image class="w-28" />
           <div class="flex-1">
             <p class="text-xl font-[700] capitalize">{{ item.name }}</p>
-            <p class="text-neutral-500">http://pokemon-wiki-drab.vercel.app/{{ item.slug }}</p>
+            <p class="text-neutral-500">https://pokemon-wiki-drab.vercel.app/{{ item.slug }}</p>
           </div>
           <div>
             <b class="text-4xl">${{ item.price }}</b>
