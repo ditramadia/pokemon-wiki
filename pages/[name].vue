@@ -7,7 +7,7 @@
   const pokemon = ref(null)
 
   const fetchData = async () => {
-    const { data } = await useFetch(`http://localhost:3000/api/pokemon/${name}`)
+    const { data } = await useFetch(`http://pokemon-wiki-drab.vercel.app/api/pokemon/${name}`)
     pokemon.value = data.value
   }
   

@@ -10,7 +10,7 @@
   const fetchData = async (page) => {
     try {
       loading.value = true
-      const { data } = await useFetch(`http://localhost:3000/api/pokemon?p=${page}`, { lazy: true})
+      const { data } = await useFetch(`http://pokemon-wiki-drab.vercel.app/api/pokemon?p=${page}`, { lazy: true})
       pokemons.value = data.value.data
     } catch (error) {
       console.error(error)
